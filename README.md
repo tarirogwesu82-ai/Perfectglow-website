@@ -50,7 +50,10 @@ Maintenance- R925 per year
 - W3Schools (n.d.) *CSS Tutorial*. Available at: https://www.w3schools.com/css/ (Accessed: DATE).
 - Small Business Administration (n.d.) *How to Start a Business*. Available at: https://www.sba.gov/ (Accessed: DATE).
 
-
+##Update
+-added image to home, about, enquiry etc 
+-  Added code content to the files
+-  -made changed to the file
 
 
 
