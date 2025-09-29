@@ -1,59 +1,97 @@
-# PERFECT GLOW WEBSITE
-**student:** TARIRO GWESU . **Module:** WEDE5020
-**chosen website:** perfect glow
+# Perfect Glow - Handmade Skincare Store
 
-## project overview
-Perfect glow is a store that sells ahndmade soaps using natural chemical free sources.It uses HTML and CSS. It includes five pages: Home, About, products, enquiry and contact.
+A simple, responsive e-commerce website showcasing handmade, natural skincare products.
 
-## website goals and objectives
--Show pricelist, products and ingredients 
--ensure user experince is excellent 
--allow easy usage and easy navigation
--create a simple but useful and functioning website
--increase sales through the website
+---
 
+## Table of Contents
 
-## key features and functionality
--responsive layout
--consistent navigation across pages and different devices
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Changelog](#changelog)
+- [References](#references)
+- [License](#license)
 
-## sitemap
--home page is index.html
--about page is about.html
-product page is product.html
-enquiry is enquiry.html
-contact is contact.html
+---
 
-## timeline and milestones
--week 1: planning pages and website structure
--week 2: start with the HTML structure
--week 3: and the images and css structure 
-week 4: test the website on multiple devices and add corrections if needed
-week 5: push to github and launch
+## Project Overview
 
-## budget
--domain:R185-R280 per year
--hosting- R555-R1110 per year
--ssl-R185-370
--Design-R1850
--images-R555 once off
--content wriring -R925
-Maintenance- R925 per year
+**Perfect Glow** is a small web project designed to demonstrate a clean, professional, and responsive website for a skincare brand.  
+The site includes:
 
-## my comments.
--Basic HTML structure and basic CSS added
--Welcome banner and about us added and logo image
--enquiry box and submit button added
+- Home, About, Products, Enquiry, and Cart pages
+- Responsive design with a mobile-friendly hamburger menu
+- Product listing with "Add to Cart" functionality
+- Search functionality for products
+- Modern UI/UX with soft colors, rounded corners, and clean typography
 
-## references 
-- W3Schools (n.d.) *HTML Tutorial*. Available at: https://www.w3schools.com/html/ (Accessed: DATE).
-- W3Schools (n.d.) *CSS Tutorial*. Available at: https://www.w3schools.com/css/ (Accessed: DATE).
-- Small Business Administration (n.d.) *How to Start a Business*. Available at: https://www.sba.gov/ (Accessed: DATE).
+---
 
-##Update
--added image to home, about, enquiry etc 
--  Added code content to the files
--  -made changed to the file
+## Features
+
+- **Responsive Design:** Works on desktop, tablet, and mobile
+- **Navigation:** Floating top navigation bar with hamburger menu on smaller screens
+- **Products:** Grid-based product display with images, price, and add-to-cart buttons
+- **Search Bar:** Allows users to search for specific products
+- **Cart:** LocalStorage-based cart that tracks selected products
+
+---
+
+## Technologies
+
+- **HTML5** – Semantic structure for web pages
+- **CSS3** – Responsive, professional styling
+- **JavaScript** – Product search, cart functionality, hamburger menu toggle
+- **LocalStorage** – Store cart items temporarily in browser
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/perfect-glow.git
+Open index.html in your web browser.
+
+Ensure all images are in the images/ folder.
+
+Make sure style.css and script.js are in the same folder as the HTML files.
+
+Usage
+Navigate through the site using the top menu.
+
+Browse products on the Products page.
+
+Use the Search bar to find specific products.
+
+Click Add to Cart to add products to your shopping cart.
+
+Cart persists in the browser until cleared.
+
+Changelog
+Version 1.0 – 2025-09-29
+Initial release
+
+Completed responsive navigation and hamburger menu
+
+Product grid layout implemented
+
+Search and cart functionality working
+
+Basic styling applied with clean, professional theme
+
+(Add future updates here as new commits are made)
+
+References
+CSS tricks for responsive design: https://css-tricks.com/
+
+JavaScript localStorage documentation: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+Inspiration for skincare UI/UX: https://www.behance.net/
+
 
 
 
