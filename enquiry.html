@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INQUIRY</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Perfect Glow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <head>
-    <img src="images/logo.png" alt="perfect glow website" class="logo" width="150">
-    <nav>
+
+  <!-- Floating Top Navigation Menu -->
+  <header class="top-nav">
+    <div class="container">
+      <h1 class="logo">Perfect Glow</h1>
+
+      <!-- hamburger for mobile -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="nav-links">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a heref="contact.html">Contact</a></li>
-            <li><a href="enquiry.html">enquiry</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="active">Enquiry</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
         </ul>
-    </nav>
-    </body>
-</header>
+      </nav>
 
-<section class="enquiry">
-    <h2>HEY! EARTH LOVER...FEEL FREE TO ASK US ABOUT ANYTHING </h2>
-    <form>
+      <!-- Search Bar -->
+      <form class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+  </header>
 
-        <br>
-    <label for="message">messages</label>
-    <br>
+  <!-- Enquiry Form Section -->
+  <div class="enquiry-container">
+    <div class="enquiry-content">
+      <h1>Make an Enquiry</h1>
+      <p>Have a question, custom order request, or need more details? Fill in the form below and we’ll get back to you shortly.</p>
 
-    <textarea id="message" name="message" rows="5" required></textarea>
-<br>
-    <button type="submit">send</button>
-    <br>
+      <form class="enquiry-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone (optional)">
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
 
-    </form>
-</section>
-<footer>
-    <p>&copy; 2025 Perfectglow. All rights reserved</p>
-</footer>
+  <!-- Script -->
+  <script src="script.js"></script>
+
 </body>
 </html>
