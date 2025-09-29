@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Perefectglow</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Perfect Glow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header> 
-        <img src="images/logo.png" alt="Perefectglow logo" width="150" >
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html>">contact</a></li>
-                <li><a href="enquiry.html">enquiry</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="contact">
-        <h1>CONTACT US</h1>
-        <form>
-            <br>
-            <label for="name">name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
+<!-- Floating Top Navigation Menu -->
+<header class="top-nav">
+  <div class="container">
+    <h1 class="logo">Perfect Glow</h1>
 
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email"  name="email" required>
-            <br>
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="cart.html">Your cart</a></li>
+      </ul>
+    </nav>
 
-            <br>
-            <label for="phone number">phone number:</label>
-            <input type="phone number" id="phone number" name="phone number" required>
-            <br>
+    <!-- Search Bar -->
+    <form class="nav-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+</header>
 
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 Perefectglow soaps. All rights reserved.</p>
-    </footer>
+
+<!-- Contact Section -->
+  <section class="contact-container">
+    <h2>Contact Us</h2>
+    <p class="intro">We’d love to hear from you. Reach out to our team for assistance or visit us in-store.</p>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Email</h3>
+        <p><a href="mailto:info@perfectglow.com">info@perfectglow.com</a></p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Phone</h3>
+        <p>+27 23 456 1789</p>
+      </div>
+
+      <div class="contact-box">
+        <h3>London Boutique</h3>
+        <p>12 Rose Lane, Cape Town</p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Manchester Boutique</h3>
+        <p>55 Lavender Street, Cape Town</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Perfect Glow · Crafted with Elegance</p>
+  </footer>
+
 </body>
 </html>
