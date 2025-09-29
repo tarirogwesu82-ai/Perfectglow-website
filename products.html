@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - Perfect Glow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <img src="images/background 1.png" alt="background" width="1000">
-   
+
+<!-- Floating Top Navigation Menu -->
+<header class="top-nav">
+  <div class="container">
+    <h1 class="logo">Perfect Glow</h1>
+
+    <!-- Hamburger Toggle -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <form class="nav-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+</header>
+
+<!-- Products Section -->
+<main class="products">
+  <h1>Our Collection</h1>
+  <div class="product-grid">
+
+    <!-- Example Product -->
+    <div class="product-card">
+      <img src="images/Saltwater Bar Soap.jpeg" alt="Saltwater + Moon Milk">
+      <h2>Saltwater + Moon Milk</h2>
+      <p>$12.99</p>
+      <button class="add-to-cart"
+              data-name="Saltwater + Moon Milk"
+              data-price="12.99"
+              data-image="images/Saltwater Bar Soap.jpeg">Add to Cart</button>
+      <p>Made to remove impurities and leave skin feeling smooth and glowy.</p>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="images/Duo Soap Bar Set_ Rainfall + Moon Milk _ Handmade Natural Skincare for Face & Body, Calming, Self-Care Gift,  Sensitive Skin, Eco-Friendly.jpeg" alt="Rainfall + Moon Milk">
+      <h2>Rainfall + Moon Milk</h2>
+      <p>$12.99</p>
+      <button class="add-to-cart"
+              data-name="Rainfall + Moon Milk"
+              data-price="12.99"
+              data-image="images/Duo Soap Bar Set_ Rainfall + Moon Milk _ Handmade Natural Skincare for Face & Body, Calming, Self-Care Gift,  Sensitive Skin, Eco-Friendly.jpeg">Add to Cart</button>
+      <p>Calming, whimsical, earthy feel for all skin types.</p>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="images/Duo Soap Bar Set_ Solstice + Moon Milk _ Handmade Natural Calming Skincare for Face & Body, Citrus Soap, Self-Care Gift, Oily Sensitive Skin.jpeg" alt="Saltwater Bar Soap">
+      <h2>Saltwater Bar Soap</h2>
+      <p>$10.99</p>
+      <button class="add-to-cart"
+              data-name="Saltwater Bar Soap"
+              data-price="10.99"
+              data-image="images/Duo Soap Bar Set_ Solstice + Moon Milk _ Handmade Natural Calming Skincare for Face & Body, Citrus Soap, Self-Care Gift, Oily Sensitive Skin.jpeg">Add to Cart</button>
+      <p>Your go-to anti-aging soap, leaving skin looking and feeling youthful.</p>
+    </div>
+
+    <!-- Add remaining products here following the same structure -->
+
+  </div>
+</main>
+
+<!-- Cart + Search + Hamburger Scripts -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Search functionality
+  const searchForms = document.querySelectorAll(".nav-search");
+  searchForms.forEach(form => {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const query = form.querySelector("input").value.toLowerCase().trim();
+      if (query) {
+        window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+      }
+    });
+  });
+
+  // Filter products based on search query
+  if (window.location.pathname.includes("products.html")) {
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get("search");
+    if (searchQuery) {
+      const products = document.querySelectorAll(".product-card");
+      products.forEach(card => {
+        const name = card.querySelector("h2").textContent.toLowerCase();
+        if (!name.includes(searchQuery)) {
+          card.style.display = "none";
+        }
+      });
+    }
+  }
+
+  // Add to Cart functionality
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existing = cart.find(item => item.name === product.name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(product.name + " added to cart!");
+  }
+
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const product = {
+        name: button.dataset.name,
+        price: parseFloat(button.dataset.price),
+        image: button.dataset.image,
+        quantity: 1
+      };
+      addToCart(product);
+    });
+  });
+});
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
