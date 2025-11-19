@@ -75,7 +75,7 @@ body, html {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: url(images/download\ \(7\).jpeg) center center / cover no-repeat;
+    background: url(images_files/images/download\ \(7\).jpeg) center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +164,7 @@ body, html {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: white;
+    color: rgb(40, 71, 15);
   }
   
   .about-container h2 {
@@ -194,13 +194,13 @@ body, html {
     max-width: 1000px;
     margin: 90px auto;
     padding: 50px;
-    background: url(images/download\ \(7\).jpeg) no-repeat center center;
+    background: url(images_files/images/≽^•⩊•^≼repost\ of\ smth\ I\ found.jpg) no-repeat center center;
     background-size: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    color: white;
+    color: rgb(40, 71, 15);
     text-align: left;
   }
   
@@ -228,7 +228,7 @@ body, html {
   
   .about-content h2 {
     margin-top: 30px;
-    color: white;
+    color: rgb(213, 82, 12);
   }
   
   /* Paragraphs & list */
@@ -328,7 +328,7 @@ body, html {
   font-family: 'Didot', 'Georgia', serif; /* Dior-like serif font */
   color: #222;
   background: url("images/download.jpeg") no-repeat center center fixed;
-  background-size: cover; /* makes it always cover screen */
+  background-size: cover; 
 }
 
 /* Overlay for readability */
@@ -571,7 +571,7 @@ body, html {
 
 /* Satin Background Image */
 body {
-  background: url("images/satin-bg.jpg") no-repeat center center fixed;
+  background: url("images_files/images/download222.jpg")
   background-size: cover;
 }
 
@@ -656,7 +656,7 @@ body, html {
   height: 100%;
   font-family: 'Didot', Georgia, serif;
   color: #222;
-  background: url("images/satin-bg.jpg") no-repeat center center fixed;
+  background:  no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -1252,3 +1252,146 @@ body::before {
   }
 }
 
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-content {
+  position: relative;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lightbox-overlay img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ============================ */
+/* 2.1 Interactive Element: Accordion Styles */
+/* ============================ */
+.accordion {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #eee;
+}
+
+.accordion-header.active {
+    background-color: #28470F; /* Your brand green */
+    color: white;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.accordion-content.open {
+    max-height: 300px; /* Sufficient height to contain content */
+    padding: 15px;
+}
+
+
+/* ============================ */
+/* Accordion Styles (CRITICAL) */
+/* ============================ */
+.accordion-header {
+    /* Style for the button */
+    width: 100%;
+    background-color: #f5f5f5;
+    /* ... other button styles ... */
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+}
+
+.accordion-header.active {
+    /* Style for when the button is open */
+    background-color: #28470F; 
+    color: white;
+}
+
+.accordion-content {
+    /* ⭐ CRITICAL: Hides content and allows for smooth transition ⭐ */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.accordion-content.open {
+    /* ⭐ CRITICAL: Sets the height to show the content (must be large enough) ⭐ */
+    max-height: 300px; 
+    padding: 15px;
+}

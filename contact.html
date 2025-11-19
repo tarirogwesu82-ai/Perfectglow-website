@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Send Perfect Glow a general message, query, or feedback. We have boutiques in Cape Town and Johannesburg.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Perfect Glow</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-<!-- Floating Top Navigation Menu -->
-<header class="top-nav">
-  <div class="container">
-    <h1 class="logo">Perfect Glow</h1>
+  <header class="top-nav">
+    <div class="container">
+      <h1 class="logo">Perfect Glow</h1>
 
-    <!-- Navigation Links -->
-    <nav class="nav-links">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="cart.html">Your cart</a></li>
-      </ul>
-    </nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
 
-    <!-- Search Bar -->
-    <form class="nav-search">
-      <input type="text" placeholder="Search...">
-      <button type="submit">🔍</button>
-    </form>
-  </div>
-</header>
+      <nav class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="cart.html">Your Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
 
+      <form class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+  </header>
 
-<!-- Contact Section -->
   <section class="contact-container">
     <h2>Contact Us</h2>
-    <p class="intro">We’d love to hear from you. Reach out to our team for assistance or visit us in-store.</p>
+    <p class="intro">We'd love to hear from you. Reach out to our team for assistance or visit us in-store.</p>
 
     <div class="contact-grid">
       <div class="contact-box">
@@ -51,21 +50,77 @@
       </div>
 
       <div class="contact-box">
-        <h3>London Boutique</h3>
+        <h3>Cape Town Boutique</h3>
         <p>12 Rose Lane, Cape Town</p>
       </div>
 
       <div class="contact-box">
-        <h3>Manchester Boutique</h3>
-        <p>55 Lavender Street, Cape Town</p>
+        <h3>Johannesburg Boutique</h3>
+        <p>55 Lavender Street, Johannesburg</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="map-section" style="margin: 40px auto; max-width: 900px;">
+    <h2 style="text-align:center;">Find Us</h2>
+
+    <h3>Cape Town Boutique</h3>
+    <iframe 
+      src="https://www.google.com/maps?q=Cape%20Town%20South%20Africa&output=embed"
+      width="100%" 
+      height="350" 
+      style="border:0; border-radius:10px; margin-bottom:20px;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+
+    <h3>Johannesburg Boutique</h3>
+    <iframe 
+      src="https://www.google.com/maps?q=Johannesburg%20South%20Africa&output=embed"
+      width="100%" 
+      height="350" 
+      style="border:0; border-radius:10px;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </section>
+  <section class="general-message-form" style="max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+      <h2>Send Us a General Message</h2>
+      <form id="contactForm"> 
+          
+          <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="Name" required minlength="3" placeholder="John Doe">
+          </div>
+          
+          <div class="form-group" style="margin-top: 15px;">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="Email" required placeholder="name@example.com">
+          </div>
+          
+          <div class="form-group" style="margin-top: 15px;">
+              <label for="messageType">Message Type:</label>
+              <select id="messageType" name="Message_Type" required>
+                  <option value="" disabled selected>Select the nature of your message</option>
+                  <option value="General_Query">General Query</option>
+                  <option value="Product_Feedback">Product Feedback</option>
+                  <option value="Website_Issue">Website Issue</option>
+              </select>
+          </div>
+          
+          <div class="form-group" style="margin-top: 15px;">
+              <label for="message">Full Message:</label>
+              <textarea id="message" name="Full_Message" rows="6" required minlength="20" placeholder="Type your message here..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn" style="margin-top: 20px;">Send Message</button>
+          <p id="contactError" class="error-message" style="color: red; margin-top: 10px; display: none;"></p>
+      </form>
+  </section>
   <footer class="footer">
-    <p>&copy; 2025 Perfect Glow · Crafted with Elegance</p>
+    <p>© 2025 Perfect Glow · Crafted with Elegance</p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>

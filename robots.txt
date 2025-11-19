@@ -1,0 +1,12 @@
+User-agent: *
+# The '*' means this applies to all web robots, instructing all bots on site access.
+
+Allow: /
+# 'Allow: /' means all content on the site is generally permitted for crawling.
+
+# I optionally disallow the 'cart.html' page as it typically contains dynamic user data 
+# (shopping cart contents) and usually doesn't need to be indexed by search engines.
+Disallow: /cart.html
+
+# This line directs search engines to the location of my sitemap file.
+Sitemap: https://yourdomain.com/sitemap.xml

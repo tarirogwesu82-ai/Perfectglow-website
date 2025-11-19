@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Review your order summary and proceed to checkout with multiple secure payment options at Perfect Glow.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Perfect Glow</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="container">
+      <h1 class="logo">Perfect Glow</h1>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <nav class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="cart.html" class="active">Your Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+
+      <form class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        
+        <section class="cart-items-list">
+            <h2>Items in Your Cart</h2>
+            <div id="cart-items">
+                <p>Loading cart items...</p>
+            </div>
+        </section>
+
+        <section class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-details">
+                <p>Subtotal: <span>R <span id="cart-total">0.00</span></span></p>
+                <p>Shipping: <span>R 60.00</span></p>
+                <h3>Total (including shipping): <span>R <span id="final-total">0.00</span></span></h3>
+            </div>
+            
+            <div class="payment-selection">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method">
+                    <option value="eft">EFT (Electronic Funds Transfer)</option>
+                    <option value="cash">Cash on Delivery</option>
+                </select>
+            </div>
+
+            <div id="eft-payment-form" style="display: block; border: 1px solid #ccc; padding: 15px; margin-top: 15px; border-radius: 8px;">
+                <h3>EFT Payment Details</h3>
+                <form>
+                    <p>Please make a transfer to the following account and submit the proof of payment details below:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 10px;">
+                        **Bank:** FNB | **Account:** 62XXXXXXXXX | **Branch:** 250655
+                    </p>
+                    <input type="text" placeholder="Your Name on Account" required>
+                    <input type="text" placeholder="EFT Reference Number" required>
+                    <input type="email" placeholder="Email for Confirmation" required>
+                    <button type="submit" class="btn">Confirm EFT Details</button>
+                </form>
+            </div>
+            
+            <div id="cash-on-delivery-form" style="display: none; border: 1px solid #ccc; padding: 15px; margin-top: 15px; border-radius: 8px;">
+                <h3>Cash on Delivery</h3>
+                <form>
+                    <p>You will pay **R <span id="cash-on-delivery-amount">0.00</span>** in cash upon delivery. Please confirm your delivery details:</p>
+                    <input type="text" placeholder="Full Delivery Address" required>
+                    <input type="tel" placeholder="Contact Phone Number" required>
+                    <button type="submit" class="btn">Place Order (Pay Cash)</button>
+                </form>
+            </div>
+            
+        </section>
+        
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

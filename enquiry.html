@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Submit a detailed enquiry to Perfect Glow for custom product orders, wholesale pricing, sponsorship, or volunteer opportunities.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enquiry - Perfect Glow</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Top Navigation Menu -->
   <header class="top-nav">
     <div class="container">
       <h1 class="logo">Perfect Glow</h1>
 
-      <!-- hamburger for mobile -->
       <div class="menu-toggle" id="menu-toggle">☰</div>
 
-      <!-- Navigation Links -->
       <nav class="nav-links" id="nav-links">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -28,7 +26,6 @@
         </ul>
       </nav>
 
-      <!-- Search Bar -->
       <form class="nav-search">
         <input type="text" placeholder="Search...">
         <button type="submit">🔍</button>
@@ -36,24 +33,43 @@
     </div>
   </header>
 
-  <!-- Enquiry Form Section -->
   <div class="enquiry-container">
     <div class="enquiry-content">
       <h1>Make an Enquiry</h1>
       <p>Have a question, custom order request, or need more details? Fill in the form below and we’ll get back to you shortly.</p>
 
-      <form class="enquiry-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="tel" placeholder="Your Phone (optional)">
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+      <form class="enquiry-form" id="enquiryForm">
+        <input type="text" id="enquiryName" placeholder="Your Name" required minlength="3">
+        <input type="email" id="enquiryEmail" placeholder="Your Email" required>
+        <input type="tel" id="enquiryPhone" placeholder="Your Phone (+27 XX XXX XXXX)" pattern="^\+27\s?(\d{2})\s?(\d{3})\s?(\d{4})$"> 
+        
+        <label for="enquiryTopic" style="margin-top: 15px; display: block; font-weight: bold;">I am enquiring about:</label>
+        <select id="enquiryTopic" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option value="Custom_Product_Order">Custom Product Order</option>
+            <option value="Bulk_Wholesale_Pricing">Bulk / Wholesale Pricing</option>
+            <option value="Sponsorship_Opportunity">Sponsorship Opportunity</option>
+            <option value="Volunteer_for_Event">Volunteer for Event</option>
+        </select>
+
+        <textarea id="enquiryMessage" placeholder="Detailed Enquiry Message (min 50 characters)" rows="5" required minlength="50"></textarea>
+
         <button type="submit">Send Enquiry</button>
+        <p id="enquiryError" class="error-message" style="color: red; margin-top: 10px; display: none;"></p>
       </form>
+      
+      <div id="enquiryResponse" style="display: none; padding: 20px; border: 1px solid #28470F; border-radius: 8px; margin-top: 20px; background-color: #f0f7f0;">
+          <h3>Enquiry Received!</h3>
+          <p>Thank yourself, <span id="responseName" style="font-weight: bold;"></span>! Your enquiry about <span id="responseTopic" style="font-weight: bold;"></span> has been submitted.</p>
+          <p id="responseMessage" style="margin-top: 10px; padding: 10px; background-color: #fff; border-left: 3px solid #28470F;"></p>
+          <p>We will contact you via <span id="responseEmail" style="font-weight: bold;"></span> within 24 hours.</p>
+      </div>
+
     </div>
   </div>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+  <script src="main.js"></script>
+
 
 </body>
 </html>
